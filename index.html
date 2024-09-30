@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+var msg;
+var attempts = 0;
+
+function match(){
+ attempts++;
+var guess = document.getElementById("inputNum").value;
+
+if (guess == randomNumber){
+msg = "congratulations! You guessed it in " + attempts + " attempts";
+}
+else if (guess > randomNumber){
+msg = "Your guess is high!";}
+else{
+msg = "Your guess is low!";}
+alert(msg);
+}
+</script>
+</head>
+
+<body>
+<p>Guess the number between 1 and 100 and press the button 'Check'</p>
+<label for="inputNum">Input Number</label>
+<input type="number" id="inputNum">
+<input type="button" id="btn" onclick="match()" value="Check">
+</body>
+</html>
